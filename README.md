@@ -24,7 +24,7 @@ Zero-shot text classification은, 텍스트르 input으로 받아, 입력된 lab
 * 추후 MBTI-dictionary 를 업데이트해, 정확도롸 설득력을 올리는 작업을 할 예정입니다. 
 * MT (machine translation) 을 이용한 중역 및, 카카오브레인 오픈소스 zero-shot model 등을 활용해 한국어에 대한 지원을 확대해볼 예정입니다. 
 
-##Examples
+## Examples
 ```
 Input: "I stayed home all day"
 
