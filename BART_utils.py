@@ -78,5 +78,6 @@ def mbti_translator(text):
     T_F = compute_score(text, "T_F")
     P_J = compute_score(text, "P_J")
 
+    print("Your sentence is: ", text)
     print("You are: ", E_I[0] + N_S[0] + T_F[0] + P_J[0])
     print("Ratio", E_I[1], N_S[1], T_F[1], P_J[1])
