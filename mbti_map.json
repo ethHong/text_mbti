@@ -1,0 +1,19 @@
+{
+  "E_I": {
+    "E": ["extrovert", "expression", "outside", "together"],
+    "I": ["introvert", "indirect", "Concerns", "alone"]
+  },
+
+  "N_S": {
+    "N": ["intuition", "ideal", "theoretical", "prediction"],
+    "S": ["sensing", "realistic", "useful", "implimentation"]
+  },
+  "T_F": {
+    "T": ["thinking", "logical", "factful", "objective"],
+    "F": ["feeling", "relationship", "value", "sympathy"]
+  },
+  "P_J": {
+    "P": ["perceiving", "elasticity", "autonomy", "indiscriminate"],
+    "J": ["judging", "planning", "objective", "systematic"]
+  }
+}
