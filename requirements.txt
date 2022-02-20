@@ -5,3 +5,4 @@ pandas==1.4.1
 tokenizers==0.11.5
 torch==1.10.2
 transformers @ git+https://github.com/huggingface/transformers@ae1f835028f89e13aea6181c93af8295946d9cf0
+streamlit
