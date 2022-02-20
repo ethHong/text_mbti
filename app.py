@@ -1,8 +1,5 @@
-from os import lseek
 import streamlit as st
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
+
 
 from BART_utils import get_prob, judge_mbti, compute_score, mbti_translator, plot_mbti
 
