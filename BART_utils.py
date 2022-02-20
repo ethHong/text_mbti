@@ -5,6 +5,8 @@ from collections import Counter
 from itertools import chain, repeat
 from tqdm import tqdm
 from load_data import *
+import matplotlib.pyplot as plt
+import streamlit as st
 
 tqdm.pandas()
 
@@ -78,6 +80,28 @@ def mbti_translator(text):
     T_F = compute_score(text, "T_F")
     P_J = compute_score(text, "P_J")
 
-    print("Your sentence is: ", text)
-    print("You are: ", E_I[0] + N_S[0] + T_F[0] + P_J[0])
-    print("Ratio", E_I[1], N_S[1], T_F[1], P_J[1])
+    return (E_I[0] + N_S[0] + T_F[0] + P_J[0]), (E_I[1], N_S[1], T_F[1], P_J[1])
+
+
+def plot_mbti(result):
+    fig, ax = plt.subplots(figsize=(10, 5))
+
+    start = 0
+    x, y = result.values()
+    x_type, y_type = result.keys()
+
+    ax.broken_barh([(start, x), (x, x + y)], [10, 9], facecolors=("#FFC5BF", "#D4F0F0"))
+    ax.set_ylim(5, 15)
+    ax.set_xlim(0, 100)
+    ax.spines["left"].set_visible(False)
+    ax.spines["bottom"].set_visible(False)
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+
+    ax.set_yticks([15, 25])
+    ax.set_xticks([0, 25, 50, 75, 100])
+
+    ax.text(x - 6, 14.5, x_type + " :" + str(int(x)) + "%", fontsize=15)
+    ax.text((x + y) - 6, 14.5, y_type + " :" + str(int(y)) + "%", fontsize=15)
+
+    st.pyplot(fig)
