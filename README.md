@@ -13,6 +13,10 @@ pipenv install
 ```
 
 다만, torch 및 transformers 는 별도 환경설정이 필요할 수 있습니다. 
+* 여기에서 각 환경에 맞는 pytorch 를 설정해주세요: https://pytorch.org
+```
+pip install transformers
+```
 Zero-shot model 에 대한 레퍼런스는 https://joeddav.github.io/blog/2020/05/29/ZSL.html 이 링크를 참고해주세요!
 
 ## Module Description 
